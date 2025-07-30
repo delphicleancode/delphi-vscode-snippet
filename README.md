@@ -24,7 +24,7 @@ Conheça mais sobre este e outros projetos em [Delphi Clean Code](https://youtub
 
 ### Método 1: Instalação Manual
 
-1. Copie o arquivo `delphi.snippets` para o diretório de snippets do VS Code:
+1. Copie o arquivo `delphi.code-snippets` para o diretório de snippets do VS Code:
    - **Windows**: `%APPDATA%\Code\User\snippets\`
    - **macOS**: `~/Library/Application Support/Code/User/snippets/`
    - **Linux**: `~/.config/Code/User/snippets/`
@@ -37,7 +37,7 @@ Conheça mais sobre este e outros projetos em [Delphi Clean Code](https://youtub
 2. Pressione `Ctrl+Shift+P` (Windows/Linux) ou `Cmd+Shift+P` (macOS)
 3. Digite "Preferences: Configure User Snippets"
 4. Selecione "pascal" ou "delphi"
-5. Cole o conteúdo do arquivo `delphi.snippets`
+5. Cole o conteúdo do arquivo `delphi.code-snippets`
 
 ## 📖 Como Usar
 
