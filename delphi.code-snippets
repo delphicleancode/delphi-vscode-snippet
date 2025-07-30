@@ -1,0 +1,530 @@
+{
+  "Estrutura Básica Delphi": {
+    "prefix": "delphibase",
+    "body": [
+      "program ${1:Programa};",
+      "",
+      "uses",
+      "  ${2:System.SysUtils},",
+      "  ${3:Vcl.Forms};",
+      "",
+      "var",
+      "  ${4:Variavel}: ${5:Tipo};",
+      "",
+      "begin",
+      "  ${6:// seu código aqui}",
+      "end."
+    ],
+    "description": "Estrutura básica de um programa Delphi/Pascal"
+  },
+  "Unit Delphi": {
+    "prefix": "delphiunit",
+    "body": [
+      "unit ${1:NomeUnit};",
+      "",
+      "interface",
+      "",
+      "uses",
+      "  ${2:System.SysUtils}, ${3:System.Classes};",
+      "",
+      "type",
+      "  ${4:// declarações}",
+      "",
+      "implementation",
+      "",
+      "${5:// implementações}",
+      "",
+      "end."
+    ],
+    "description": "Estrutura básica de uma unit Delphi"
+  },
+  "Procedure Delphi": {
+    "prefix": "delphiproc",
+    "body": [
+      "procedure ${1:NomeProcedimento}(${2:Parametros});",
+      "begin",
+      "  ${3:// implementação}",
+      "end;"
+    ],
+    "description": "Modelo de procedure em Delphi"
+  },
+  "Function Delphi": {
+    "prefix": "delphifunc",
+    "body": [
+      "function ${1:NomeFuncao}(${2:Parametros}): ${3:TipoRetorno};",
+      "begin",
+      "  ${4:// implementação}",
+      "  Result := ${5:valor};",
+      "end;"
+    ],
+    "description": "Modelo de function em Delphi"
+  },
+  "Classe Delphi": {
+    "prefix": "delphiclass",
+    "body": [
+      "type",
+      "  ${1:TMinhaClasse} = class(${2:TObject})",
+      "  private",
+      "    ${3:FField}: ${4:Tipo};",
+      "    procedure ${5:SetField}(const Value: ${4:Tipo});",
+      "  public",
+      "    constructor Create;",
+      "    destructor Destroy; override;",
+      "    property ${6:Field}: ${4:Tipo} read ${3:FField} write ${5:SetField};",
+      "    ${7:// outros métodos}",
+      "  end;"
+    ],
+    "description": "Template de declaração de classe em Delphi"
+  },
+  "Interface Delphi": {
+    "prefix": "delphiinterface",
+    "body": [
+      "type",
+      "  ${1:IMinhaInterface} = interface",
+      "    ['{${2:GUID}}']",
+      "    ${3:// métodos da interface}",
+      "  end;"
+    ],
+    "description": "Template de interface em Delphi"
+  },
+  "Record Delphi": {
+    "prefix": "delphirecord",
+    "body": [
+      "type",
+      "  ${1:TMinhaRecord} = record",
+      "    ${2:Campo1}: ${3:Tipo1};",
+      "    ${4:Campo2}: ${5:Tipo2};",
+      "    class operator Initialize(out Dest: ${1:TMinhaRecord});",
+      "    class operator Finalize(var Dest: ${1:TMinhaRecord});",
+      "  end;"
+    ],
+    "description": "Template de record em Delphi"
+  },
+  "Enum Delphi": {
+    "prefix": "delphienum",
+    "body": [
+      "type",
+      "  ${1:TMinhaEnum} = (${2:Item1}, ${3:Item2}, ${4:Item3});"
+    ],
+    "description": "Template de enumeração em Delphi"
+  },
+  "Set Delphi": {
+    "prefix": "delphiset",
+    "body": [
+      "type",
+      "  ${1:TMinhaEnum} = (${2:Item1}, ${3:Item2}, ${4:Item3});",
+      "  ${5:TMeuSet} = set of ${1:TMinhaEnum};"
+    ],
+    "description": "Template de conjunto (set) em Delphi"
+  },
+  "Array Delphi": {
+    "prefix": "delphiarray",
+    "body": [
+      "type",
+      "  ${1:TMeuArray} = array[${2:0}..${3:10}] of ${4:Tipo};"
+    ],
+    "description": "Template de array estático em Delphi"
+  },
+  "Dynamic Array Delphi": {
+    "prefix": "delphidynarray",
+    "body": [
+      "type",
+      "  ${1:TMeuArrayDinamico} = array of ${2:Tipo};"
+    ],
+    "description": "Template de array dinâmico em Delphi"
+  },
+  "Try Except Delphi": {
+    "prefix": "delphitryexcept",
+    "body": [
+      "try",
+      "  ${1:// código que pode gerar exceção}",
+      "except",
+      "  on E: ${2:Exception} do",
+      "  begin",
+      "    ${3:// tratamento da exceção}",
+      "  end;",
+      "end;"
+    ],
+    "description": "Template de try-except em Delphi"
+  },
+  "Try Finally Delphi": {
+    "prefix": "delphitryfinally",
+    "body": [
+      "try",
+      "  ${1:// código principal}",
+      "finally",
+      "  ${2:// código de limpeza}",
+      "end;"
+    ],
+    "description": "Template de try-finally em Delphi"
+  },
+  "If Statement Delphi": {
+    "prefix": "delphiif",
+    "body": [
+      "if ${1:condicao} then",
+      "begin",
+      "  ${2:// código}",
+      "end",
+      "else",
+      "begin",
+      "  ${3:// código alternativo}",
+      "end;"
+    ],
+    "description": "Template de if-then-else em Delphi"
+  },
+  "Case Statement Delphi": {
+    "prefix": "delphicase",
+    "body": [
+      "case ${1:variavel} of",
+      "  ${2:valor1}: ${3:// ação 1};",
+      "  ${4:valor2}: ${5:// ação 2};",
+      "else",
+      "  ${6:// ação padrão};",
+      "end;"
+    ],
+    "description": "Template de case statement em Delphi"
+  },
+  "For Loop Delphi": {
+    "prefix": "delphifor",
+    "body": [
+      "for ${1:i} := ${2:0} to ${3:10} do",
+      "begin",
+      "  ${4:// código do loop}",
+      "end;"
+    ],
+    "description": "Template de for loop em Delphi"
+  },
+  "For In Loop Delphi": {
+    "prefix": "delphiforin",
+    "body": [
+      "for ${1:item} in ${2:colecao} do",
+      "begin",
+      "  ${3:// código do loop}",
+      "end;"
+    ],
+    "description": "Template de for-in loop em Delphi"
+  },
+  "While Loop Delphi": {
+    "prefix": "delphiwhile",
+    "body": [
+      "while ${1:condicao} do",
+      "begin",
+      "  ${2:// código do loop}",
+      "end;"
+    ],
+    "description": "Template de while loop em Delphi"
+  },
+  "Repeat Until Delphi": {
+    "prefix": "delphirepeat",
+    "body": [
+      "repeat",
+      "  ${1:// código do loop}",
+      "until ${2:condicao};"
+    ],
+    "description": "Template de repeat-until em Delphi"
+  },
+  "Property Delphi": {
+    "prefix": "delphiprop",
+    "body": [
+      "private",
+      "  ${1:FProperty}: ${2:Tipo};",
+      "  procedure ${3:SetProperty}(const Value: ${2:Tipo});",
+      "public",
+      "  property ${4:Property}: ${2:Tipo} read ${1:FProperty} write ${3:SetProperty};"
+    ],
+    "description": "Template de property em Delphi"
+  },
+  "Property Read Only Delphi": {
+    "prefix": "delphipropro",
+    "body": [
+      "private",
+      "  ${1:FProperty}: ${2:Tipo};",
+      "public",
+      "  property ${3:Property}: ${2:Tipo} read ${1:FProperty};"
+    ],
+    "description": "Template de property somente leitura em Delphi"
+  },
+  "Constructor Delphi": {
+    "prefix": "delphiconstructor",
+    "body": [
+      "constructor ${1:TMinhaClasse}.Create${2:(AParametro: Tipo)};",
+      "begin",
+      "  inherited Create;",
+      "  ${3:// inicialização}",
+      "end;"
+    ],
+    "description": "Template de constructor em Delphi"
+  },
+  "Destructor Delphi": {
+    "prefix": "delphidestructor",
+    "body": [
+      "destructor ${1:TMinhaClasse}.Destroy;",
+      "begin",
+      "  ${2:// limpeza}",
+      "  inherited Destroy;",
+      "end;"
+    ],
+    "description": "Template de destructor em Delphi"
+  },
+  "Generic Class Delphi": {
+    "prefix": "delphigeneric",
+    "body": [
+      "type",
+      "  ${1:TMinhaClasse}<${2:T}> = class",
+      "  private",
+      "    ${3:FValue}: ${2:T};",
+      "  public",
+      "    constructor Create(const AValue: ${2:T});",
+      "    property Value: ${2:T} read ${3:FValue} write ${3:FValue};",
+      "  end;"
+    ],
+    "description": "Template de classe genérica em Delphi"
+  },
+  "Event Handler Delphi": {
+    "prefix": "delphievent",
+    "body": [
+      "procedure ${1:TForm1}.${2:Button1Click}(Sender: TObject);",
+      "begin",
+      "  ${3:// código do evento}",
+      "end;"
+    ],
+    "description": "Template de event handler em Delphi"
+  },
+  "Thread Delphi": {
+    "prefix": "delphithread",
+    "body": [
+      "type",
+      "  ${1:TMinhaThread} = class(TThread)",
+      "  protected",
+      "    procedure Execute; override;",
+      "  public",
+      "    constructor Create(CreateSuspended: Boolean = False);",
+      "  end;",
+      "",
+      "constructor ${1:TMinhaThread}.Create(CreateSuspended: Boolean);",
+      "begin",
+      "  inherited Create(CreateSuspended);",
+      "  FreeOnTerminate := True;",
+      "end;",
+      "",
+      "procedure ${1:TMinhaThread}.Execute;",
+      "begin",
+      "  while not Terminated do",
+      "  begin",
+      "    ${2:// código da thread}",
+      "  end;",
+      "end;"
+    ],
+    "description": "Template de thread em Delphi"
+  },
+  "Singleton Delphi": {
+    "prefix": "delphisingleton",
+    "body": [
+      "type",
+      "  ${1:TSingleton} = class",
+      "  private",
+      "    class var FInstance: ${1:TSingleton};",
+      "    constructor Create;",
+      "  public",
+      "    class function GetInstance: ${1:TSingleton};",
+      "    destructor Destroy; override;",
+      "  end;",
+      "",
+      "constructor ${1:TSingleton}.Create;",
+      "begin",
+      "  inherited Create;",
+      "end;",
+      "",
+      "destructor ${1:TSingleton}.Destroy;",
+      "begin",
+      "  inherited Destroy;",
+      "end;",
+      "",
+      "class function ${1:TSingleton}.GetInstance: ${1:TSingleton};",
+      "begin",
+      "  if not Assigned(FInstance) then",
+      "    FInstance := ${1:TSingleton}.Create;",
+      "  Result := FInstance;",
+      "end;"
+    ],
+    "description": "Template de padrão Singleton em Delphi"
+  },
+  "Form Unit Delphi": {
+    "prefix": "delphiform",
+    "body": [
+      "unit ${1:Unit1};",
+      "",
+      "interface",
+      "",
+      "uses",
+      "  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,",
+      "  System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs;",
+      "",
+      "type",
+      "  ${2:TForm1} = class(TForm)",
+      "  private",
+      "    { Private declarations }",
+      "  public",
+      "    { Public declarations }",
+      "  end;",
+      "",
+      "var",
+      "  ${3:Form1}: ${2:TForm1};",
+      "",
+      "implementation",
+      "",
+      "{$R *.dfm}",
+      "",
+      "end."
+    ],
+    "description": "Template de unit para formulário VCL em Delphi"
+  },
+  "DataModule Delphi": {
+    "prefix": "delphidatamodule",
+    "body": [
+      "unit ${1:DataModule1};",
+      "",
+      "interface",
+      "",
+      "uses",
+      "  System.SysUtils, System.Classes;",
+      "",
+      "type",
+      "  ${2:TDataModule1} = class(TDataModule)",
+      "  private",
+      "    { Private declarations }",
+      "  public",
+      "    { Public declarations }",
+      "  end;",
+      "",
+      "var",
+      "  ${3:DataModule1}: ${2:TDataModule1};",
+      "",
+      "implementation",
+      "",
+      "{$R *.dfm}",
+      "",
+      "end."
+    ],
+    "description": "Template de DataModule em Delphi"
+  },
+  "Database Query Delphi": {
+    "prefix": "delphiquery",
+    "body": [
+      "var",
+      "  Query: TFDQuery;",
+      "begin",
+      "  Query := TFDQuery.Create(nil);",
+      "  try",
+      "    Query.Connection := ${1:Connection};",
+      "    Query.SQL.Text := '${2:SELECT * FROM tabela}';",
+      "    Query.Open;",
+      "    ${3:// processar dados}",
+      "  finally",
+      "    Query.Free;",
+      "  end;",
+      "end;"
+    ],
+    "description": "Template para consulta de banco de dados com FireDAC"
+  },
+  "REST Client Delphi": {
+    "prefix": "delphirest",
+    "body": [
+      "uses",
+      "  REST.Client, REST.Types;",
+      "",
+      "var",
+      "  RESTClient: TRESTClient;",
+      "  RESTRequest: TRESTRequest;",
+      "  RESTResponse: TRESTResponse;",
+      "begin",
+      "  RESTClient := TRESTClient.Create('${1:http://api.exemplo.com}');",
+      "  RESTRequest := TRESTRequest.Create(nil);",
+      "  RESTResponse := TRESTResponse.Create(nil);",
+      "  try",
+      "    RESTRequest.Client := RESTClient;",
+      "    RESTRequest.Response := RESTResponse;",
+      "    RESTRequest.Resource := '${2:endpoint}';",
+      "    RESTRequest.Method := ${3:rmGET};",
+      "    RESTRequest.Execute;",
+      "    ${4:// processar resposta}",
+      "  finally",
+      "    RESTResponse.Free;",
+      "    RESTRequest.Free;",
+      "    RESTClient.Free;",
+      "  end;",
+      "end;"
+    ],
+    "description": "Template para cliente REST em Delphi"
+  },
+  "JSON Parse Delphi": {
+    "prefix": "delphijson",
+    "body": [
+      "uses",
+      "  System.JSON;",
+      "",
+      "var",
+      "  JSONValue: TJSONValue;",
+      "  JSONObject: TJSONObject;",
+      "begin",
+      "  JSONValue := TJSONObject.ParseJSONValue('${1:json_string}');",
+      "  if JSONValue is TJSONObject then",
+      "  begin",
+      "    JSONObject := TJSONObject(JSONValue);",
+      "    try",
+      "      ${2:// processar JSON}",
+      "    finally",
+      "      JSONObject.Free;",
+      "    end;",
+      "  end;",
+      "end;"
+    ],
+    "description": "Template para parsing de JSON em Delphi"
+  },
+  "File Operations Delphi": {
+    "prefix": "delphifile",
+    "body": [
+      "uses",
+      "  System.IOUtils;",
+      "",
+      "var",
+      "  FileName: string;",
+      "  Content: string;",
+      "begin",
+      "  FileName := '${1:arquivo.txt}';",
+      "  ",
+      "  // Ler arquivo",
+      "  if TFile.Exists(FileName) then",
+      "    Content := TFile.ReadAllText(FileName);",
+      "  ",
+      "  // Escrever arquivo",
+      "  TFile.WriteAllText(FileName, '${2:conteúdo}');",
+      "  ",
+      "  ${3:// outras operações}",
+      "end;"
+    ],
+    "description": "Template para operações com arquivos em Delphi"
+  },
+  "Custom Exception Delphi": {
+    "prefix": "delphiexception",
+    "body": [
+      "type",
+      "  ${1:EMinhaExcecao} = class(Exception)",
+      "  public",
+      "    constructor Create(const Msg: string); overload;",
+      "    constructor Create(const Msg: string; const Args: array of const); overload;",
+      "  end;",
+      "",
+      "constructor ${1:EMinhaExcecao}.Create(const Msg: string);",
+      "begin",
+      "  inherited Create(Msg);",
+      "end;",
+      "",
+      "constructor ${1:EMinhaExcecao}.Create(const Msg: string; const Args: array of const);",
+      "begin",
+      "  inherited Create(Format(Msg, Args));",
+      "end;"
+    ],
+    "description": "Template para exceção customizada em Delphi"
+  }
+}
